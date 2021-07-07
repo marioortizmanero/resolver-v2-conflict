@@ -1,0 +1,9 @@
+[package]
+name = "resolver-v2-conflict"
+version = "0.1.0"
+edition = "2018"
+# resolver = "2"
+
+[dependencies]
+async-dep = { path = "../async-dep" }
+sync-dep = { path = "../sync-dep" }
