@@ -17,7 +17,28 @@ There is some confusion about the resolver v2 regarding that it's supposed to
 fix this case, but in reality it's not. You can use the `toggle-resolver` script
 to switch between the resolver 1 and the resolver 2 easily:
 
-```
+```commandline
+$ # First attempt with v1
+$ cargo build
+   Compiling problematic-crate v0.1.0 (/home/mario/Programming/resolver-v2-conflict/problematic-crate)
+error: Conflict found.
+ --> problematic-crate/src/lib.rs:2:1
+  |
+2 | / compile_error! {
+3 | |     "Conflict found."
+4 | | }
+  | |_^
+
+error: aborting due to previous error
+
+error: could not compile `problematic-crate`
+
+To learn more, run the command again with --verbose.
+
+$ # Switching to v2
+$ ./toggle-resolver.sh
+
+$ # It will fail as well:
 $ cargo build
    Compiling problematic-crate v0.1.0 (/home/mario/Programming/resolver-v2-conflict/problematic-crate)
 error: Conflict found.
