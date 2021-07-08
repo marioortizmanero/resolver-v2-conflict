@@ -2,7 +2,7 @@
 name = "async-dep"
 version = "0.1.0"
 edition = "2018"
-resolver = "2"
+# resolver = "2"
 
 [dependencies]
 problematic-crate = { path = "../problematic-crate", features = ["async"] }
