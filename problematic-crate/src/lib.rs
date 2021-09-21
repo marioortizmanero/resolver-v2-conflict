@@ -19,7 +19,7 @@ compile_error! {
 //    = note: `something` must be defined only once in the value namespace of this module
 // ```
 //
-// Too see that error instead, uncomment the following lines:
+// To see that error instead, uncomment the following lines:
 //
 // #[cfg(feature = "async")]
 // pub fn something() {
